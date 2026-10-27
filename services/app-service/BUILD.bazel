@@ -41,6 +41,6 @@ oci_push(
 go_library(
     name = "app-service_lib",
     srcs = ["main.go"],
-    importpath = "github.com/Toandos/products/apps/hosting/app-service",
+    importpath = "github.com/Toandos/products/services/app-service",
     visibility = ["//visibility:private"],
 )

@@ -11,7 +11,7 @@ go_library(
 
 go_binary(
     name = "app",
-    embed = [":session-service_lib"],
+    embed = [":book-service_lib"],
     visibility = ["//visibility:public"],
 )
 
@@ -42,5 +42,12 @@ go_library(
     name = "session-service_lib",
     srcs = ["main.go"],
     importpath = "github.com/Toandos/products/apps/hosting/session-service",
+    visibility = ["//visibility:private"],
+)
+
+go_library(
+    name = "book-service_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/Toandos/products/services/book-service",
     visibility = ["//visibility:private"],
 )

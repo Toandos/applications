@@ -3,7 +3,8 @@ load("@rules_multirun//:defs.bzl", "multirun")
 multirun(
     name = "push_images",
     commands = [
-        "//apps/hosting/app-service:push_image",
+        "//services/app-service:push_image",
+        "//services/book-service:push_image",
     ],
     jobs = 0,
 )

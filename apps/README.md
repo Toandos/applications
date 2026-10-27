@@ -1,5 +1,5 @@
 # Applications
 Documentation regarding applications can be found in the folder designated to their product:
 * [Accounts](/apps/accounts)
-* [Books](/apps/books)
+* [Reader](/apps/reader)
 * [Hosting](/apps/hosting)
