@@ -1,11 +1,11 @@
-# Products
-This repository contains API definitions and source code for all products.
+# Applications
+This repository contains all API definitions and application source code.
 
 ## API definitions
 Documentation regarding the API definitions can be found in the [/apis](/apis) folder.
 
-## Apps
-Documentation regarding apps can be found in the [/apps](/apps) folder.
+## UI
+Documentation regarding user interfaces can be found in the [/ui](/ui) folder.
 
 ## Services
 Documentation regarding backend services can be found in the [/services](/services) folder.
