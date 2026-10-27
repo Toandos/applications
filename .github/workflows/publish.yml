@@ -38,5 +38,5 @@ jobs:
       - name: Bazel build
         run: bazel build //...
 
-      - name: Bazel push app images
-        run: bazel run //apps:push_images
+      - name: Bazel push service images
+        run: bazel run //services:push_images
