@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Toandos/applications/compare/v1.1.1...v1.2.0) (2026-11-22)
+
+
+### Features
+
+* Switch build system to nx ([1723633](https://github.com/Toandos/applications/commit/1723633c5c2401f45fe4de807cf2b52a84128351))
+
 ## [1.1.1](https://github.com/Toandos/applications/compare/v1.1.0...v1.1.1) (2026-10-27)
 
 
