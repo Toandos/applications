@@ -1,0 +1,31 @@
+{
+    "name": "@toando/apis",
+    "description": "Api definitions for interacting with toando products",
+    "type": "module",
+    "scripts": {
+        "generate": "npx buf generate"
+    },
+    "files": ["generated"],
+    "exports": {
+        "./*": "./generated/*"
+    },
+    "nx": {
+        "targets": {
+            "generate": {
+                "inputs": [
+                    "{projectRoot}/apis/buf.yaml",
+                    "{projectRoot}/apis/buf.gen.yaml",
+                    "{projectRoot}/apis/**/*.proto"
+                ],
+                "outputs": [
+                    "{projectRoot}/apis/generated"
+                ],
+                "cache": true
+            }
+        }
+    },
+    "dependencies": {
+        "@bufbuild/buf": "^1.75.0",
+        "@bufbuild/protobuf": "^2.17.0"
+    }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "analytics": false,
+  "plugins": [
+    {
+      "plugin": "@nx/docker",
+      "options": {
+        "buildTarget": {
+          "name": "docker:build"
+        },
+        "runTarget": {
+          "name": "docker:run"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    }
+  ],
+  "targetDefaults": {
+    "docker:build": {
+      "dependsOn": [
+        "build"
+      ]
+    }
+  },
+  "release": {
+    "projects": [
+      "@toando/accounts-ui"
+    ],
+    "projectsRelationship": "fixed",
+    "docker": {
+      "registryUrl": "ghcr.io",
+      "repositoryName": "Toandos/{projectName}"
+    }
+  }
+}

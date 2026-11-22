@@ -16,12 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup bazel
-        uses: bazel-contrib/setup-bazel@0.19.1
-        with:
-          bazelisk-cache: true
-          disk-cache: ${{ github.workflow }}
-          repository-cache: true
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Bazel test
-        run: bazel test //...
+      - name: Lint, Test, and Build Affected Projects
+        run: npx nx affected -t lint test build --parallel=3

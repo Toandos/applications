@@ -1,0 +1,21 @@
+{
+  "name": "applications",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@nx/docker": "^24.0.6",
+    "@nx/js": "^24.0.6",
+    "@swc/helpers": "~0.5.18",
+    "nx": "24.0.6",
+    "typescript": "~6.0.3"
+  },
+  "allowScripts": {
+    "nx@24.0.6": true,
+    "@bufbuild/buf@1.75.0": true
+  },
+  "workspaces": [
+    "libs/ts/apis",
+    "ui/*"
+  ],
+  "dependencies": {}
+}
